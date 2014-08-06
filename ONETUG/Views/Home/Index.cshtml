@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<script>
+    $(function () {
+        $.getJSON("@Url.Content("~/api/upcomingmeetings")", function (data) {
+            if (data != null) {
+                $("#divEvents").html("");
+                for (var i = 0; i < data.length; i++) {
+                    $("#divEvents").append('<div style="border:1px">');
+                    $("#divEvents").append('<h4 class="ui-widget-header">' + data[i].Name + '</h4>');
+                    $("#divEvents").append('<p><strong>When:</strong>&nbsp;' + data[i].MeetingTime + '</p>');
+                    $("#divEvents").append('<p><strong>Where:</strong><br/>' + data[i].VenueName + '<br/>' + data[i].VenueAddress + '</p>');
+                    $("#divEvents").append('<a href="' + data[i].Url + '"><strong><em>Join ' + Math.max(2, data[i].NumberRSVPedYes) + ' other attendees</em></strong></a>');
+                    $("#divEvents").append(data[i].MeetingDescriptionHTML);
+                    $("#divEvents").append('</div>');
+                }
+            }
+
+        });
+    });
+
+</script>
+
+<div>
+    <hgroup class="title">
+        <h1>Join Onetug</h1>
+    </hgroup>
+
+    <div>
+        <ol>
+            <li>@Html.ActionLink("Signup for ONETUG newsletter", "Join")</li>
+            <li><a target="_blank" href="http://www.meetup.com/ONETUG/">Join ONETUG meetup group</a></li>
+        </ol>
+    </div>
+</div>
+<div style="clear: both"></div>
+<div>
+    <hgroup class="title">
+        <h1>Upcoming Events</h1>
+    </hgroup>
+
+    <div id="divEvents">
+        No upcoming meetings on schedule. Please check back in a couple of days.
+    </div>
+</div>

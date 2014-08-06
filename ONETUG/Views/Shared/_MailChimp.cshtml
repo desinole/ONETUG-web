@@ -1,0 +1,52 @@
+﻿@model ONETUG.Models.MailChimpModel
+<script>
+    $(document).ready(function () {
+        $('form').submit(function () {
+            var formData = {
+                FirstName: $('#FirstName').val(),
+                LastName: $('#LastName').val(),
+                EmailAddress: $('#EmailAddress').val()
+            };
+            $.ajax({
+                url: '@Url.Content("~/api/subscribenewsletter")',
+                type: "POST",
+                dataType: "json",
+                //contentType: "application/json; charset=utf-8",
+                data: formData,
+                success: function (result) {
+                    $("#divMessage").html('<p style="color:green;font-weight:bold">Welcome to the ONETUG mailing list. Please check your inbox for further directions</p>');
+                },
+                error: function (result) {
+                    $("#divMessage").html('<p style="color:green;font-weight:bold">Something went wrong while subscribing to the ONETUG mailing list. Please email us at board@onetug.org</p>');
+                }
+
+            });
+            return false;
+        });
+    });
+</script>
+<div id="divMessage"></div>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.FirstName)
+                @Html.TextBoxFor(m => m.FirstName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.EmailAddress)
+                @Html.TextBoxFor(m => m.EmailAddress)
+            </li>
+        </ol>
+        <input type="submit" value="Subscribe" />
+    </fieldset>
+}

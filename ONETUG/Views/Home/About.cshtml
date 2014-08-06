@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Our story";
+}
+<script>
+    $(function () {
+        $.getJSON("@Url.Content("~/api/group")", function (data) {
+            if (data != null) {
+                $("#divGroupInfo").html("");
+               $("#divGroupInfo").append('<a target="_blank" href="' + data.GroupUrl + '"><img style="padding-right:10px;padding-top:10px;float:left" height="100px" src="' + data.ImageUrl + '" /></a>');
+               $("#divGroupInfo").append('<a target="_blank" href="' + data.GroupUrl + '"><h1>' + data.Name + '</h1></a>');
+               $("#divGroupInfo").append(data.Description);
+            }
+        });
+    });
+
+</script>
+
+<div>
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+    <div id="divGroupInfo">
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div style="clear: both"></div>

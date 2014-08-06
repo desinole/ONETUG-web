@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - ONETUG</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <script>
+        $(function () {
+            $.getJSON("@Url.Content("~/api/sponsors")", function (data) {
+                if (data != null) {
+                    $("#divSponsors").html("");
+                    $("#divSponsors").append('<div><hgroup class="title"><h1>Our sponsors</h1></hgroup>');
+                    for (var i = 0; i < data.length; i++) {
+                        $("#divSponsors").append('<div><a href="' + data[i].CompanyUrl + '" target="_blank"><img style="float:left" src="' + data[i].ImageUrl + '" /></a>' + data[i].Info + '</div><p>&nbsp;</p>');
+                    }
+                    $("#divSponsors").append('</div><div style="clear: both"></div>');
+                }
+            });
+        });
+    </script>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left" style="padding-right: 20px">
+                <a href="~/">
+                    <img src="@Url.Content("~/images/onetug.png")" alt="ONETUG Logo" /></a>
+            </div>
+            <div class="float-left">
+                <div class="float-right">
+                    <h1>Orlando .NET User Group</h1>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="float-right">
+                    @*                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>*@
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Our story", "About", "Home")</li>
+                            <li>@Html.ActionLink("The Team", "Team", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            <article>
+                @RenderBody()
+            </article>
+            <aside>
+                @Html.Partial("_Tweet")
+            </aside>
+            <article>
+                <div id="divSponsors"  class="content-wrapper" style="width:100%"></div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div>
+                <div class="float-left" style="padding-right: 20px">
+                    <p>&copy; 2001 - @DateTime.Now.Year ONETUG</p>
+                </div>
+                <div class="float-left" style="padding-right: 20px">
+                    <a href="https://www.facebook.com/groups/onetug/" target="_blank">
+                        <img src="@Url.Content("~/images/icon_facebook_32.png")" />
+                    </a>
+                </div>
+                <div class="float-left" style="padding-right: 20px">
+                    <a href="https://www.linkedin.com/groups?gid=1550507" target="_blank">
+                        <img src="@Url.Content("~/images/icon_linkedin_32.png")" />
+                    </a>
+                </div>
+                <div class="float-left" style="padding-right: 20px">
+                    <a href="https://twitter.com/ONETUG" target="_blank">
+                        <img src="@Url.Content("~/images/icon_twitter_32.png")" />
+                    </a>
+                </div>
+                <div class="float-left" style="padding-right: 20px">
+                    <a href="http://www.meetup.com/ONETUG/" target="_blank">
+                        <img src="@Url.Content("~/images/icon_meetup_32.png")" />
+                    </a>
+                </div>
+                <div class="float-left" style="padding-right: 20px">
+                    <a href="emailto:board@onetug.org">
+                        <img src="@Url.Content("~/images/icon_email_32.png")" />
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            
+
+        </div>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-10607215-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    </footer>
+
+</body>
+</html>
