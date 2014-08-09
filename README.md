@@ -20,5 +20,5 @@ Requirements:
 1. Visual Studio 2012 or higher with .NET Framework 4.5
 2. ASP.NET MVC 4
 3. [Meetup API Key](https://secure.meetup.com/meetup_api/key/)
-4. optional - [MailChimp API](http://kb.mailchimp.com/article/where-can-i-find-my-api-key)
+4. optional - [MailChimp API Key](http://kb.mailchimp.com/article/where-can-i-find-my-api-key)
 5. Get a [Twitter widget ID](https://twitter.com/settings/widgets/new/search?query=ONETUG)
