@@ -15,6 +15,11 @@ namespace ONETUG.Controllers
             return View();
         }
 
+        public ActionResult Privacy()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
 

@@ -352,6 +352,7 @@
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\Join.cshtml" />
     <Content Include="Views\Shared\_Tweet.cshtml" />
+    <Content Include="Views\Home\Privacy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
