@@ -14,10 +14,10 @@
                 //contentType: "application/json; charset=utf-8",
                 data: formData,
                 success: function (result) {
-                    $("#divMessage").html('<p style="color:green;font-weight:bold">Welcome to the ONETUG mailing list. Please check your inbox for further directions</p>');
+                    $("#divMessage").html('<p style="color:green;font-weight:bold">Welcome to the @Html.GroupName() mailing list. Please check your inbox for further directions</p>');
                 },
                 error: function (result) {
-                    $("#divMessage").html('<p style="color:green;font-weight:bold">Something went wrong while subscribing to the ONETUG mailing list. Please email us at board@onetug.org</p>');
+                    $("#divMessage").html('<p style="color:green;font-weight:bold">Something went wrong while subscribing to the @Html.GroupName() mailing list. Please email us at @Html.GroupEmailAddress()</p>');
                 }
 
             });

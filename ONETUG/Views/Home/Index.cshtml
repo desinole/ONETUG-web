@@ -29,8 +29,8 @@
 
     <div>
         <ol>
-            <li>@Html.ActionLink("Signup for ONETUG newsletter", "Join")</li>
-            <li><a target="_blank" href="http://www.meetup.com/ONETUG/">Join ONETUG meetup group</a></li>
+            <li>@Html.ActionLink(string.Format("Signup for {0} newsletter", Html.GroupName()), "Join")</li>
+            <li><a target="_blank" href="http://www.meetup.com/@Html.MeetupGroupName()/">Join @Html.GroupName() meetup group</a></li>
         </ol>
     </div>
 </div>

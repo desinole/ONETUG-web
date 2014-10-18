@@ -10,7 +10,7 @@ namespace Core
 {
     public class Meeting
     {
-        private static string _eventURL = string.Format("https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=ONETUG&page=20&key={0}", ConfigurationManager.AppSettings["MeetupAPI"]);
+        private static string _eventURL = string.Format("https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname={0}&page=20&key={1}", GroupSettings.Instance.MeetupGroupName, GroupSettings.Instance.MeetupApi);
 
         public string VenueName { get; set; }
         public string VenueAddress { get; set; }

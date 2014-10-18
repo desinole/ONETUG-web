@@ -10,7 +10,7 @@ namespace Core
 {
     public class MeetupSponsors
     {
-        private static string _groupInfoUrl = string.Format("https://api.meetup.com/2/groups?&sign=true&photo-host=public&group_urlname=ONETUG&fields=sponsors&page=20&key={0}", ConfigurationManager.AppSettings["MeetupAPI"]);
+        private static string _groupInfoUrl = string.Format("https://api.meetup.com/2/groups?&sign=true&photo-host=public&group_urlname={0}&fields=sponsors&page=20&key={1}", GroupSettings.Instance.MeetupGroupName, GroupSettings.Instance.MeetupApi);
 
         public string Name { get; set; }
         public string CompanyUrl { get; set; }
@@ -26,7 +26,17 @@ namespace Core
         public static List<MeetupSponsors> Get()
         {
             List<MeetupSponsors> sponsors = new List<MeetupSponsors>();
-            string jsonResponse = ONETUGRequest.GetResponse(_groupInfoUrl);
+
+            string jsonResponse = null;
+            try
+            {
+                jsonResponse = ONETUGRequest.GetResponse(_groupInfoUrl);
+            }
+            catch (System.Net.WebException)
+            {
+                throw new InvalidOperationException("Error retrieving sponsor data.");
+            }
+
             dynamic d = JObject.Parse(jsonResponse);
             if (d.results.Count > 0)
             {
