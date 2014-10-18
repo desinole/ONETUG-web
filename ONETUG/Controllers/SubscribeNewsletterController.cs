@@ -1,4 +1,5 @@
-﻿using MailChimp;
+﻿using Core;
+using MailChimp;
 using MailChimp.Helper;
 using MailChimp.Lists;
 using System;
@@ -19,8 +20,8 @@ namespace ONETUG.Controllers
     }
     public class SubscribeNewsletterController : ApiController
     {
-        private string _mailchimpKey = System.Configuration.ConfigurationManager.AppSettings["MailChimpAPIKey"];
-        private string _mailchimpGroupId = System.Configuration.ConfigurationManager.AppSettings["MailChimpGroupId"];
+        private string _mailchimpKey = GroupSettings.Instance.MailChimpApiKey;
+        private string _mailchimpGroupId = GroupSettings.Instance.MailChimpGroupId;
 
         // POST api/mailchimp
         public string Post(Subscriber subscriber)

@@ -7,13 +7,14 @@ using System.Web.Http;
 using MailChimp;
 using MailChimp.Helper;
 using MailChimp.Lists;
+using Core;
 
 namespace ONETUG.Controllers
 {
     public class MemberController : ApiController
     {
-        private string _mailchimpKey = System.Configuration.ConfigurationManager.AppSettings["MailChimpAPIKey"];
-        private string _mailchimpGroupId = System.Configuration.ConfigurationManager.AppSettings["MailChimpGroupId"];
+        private string _mailchimpKey = GroupSettings.Instance.MailChimpApiKey;
+        private string _mailchimpGroupId = GroupSettings.Instance.MailChimpGroupId;
 
         [HttpPost]
         public bool Subscribe(ONETUGMember member)

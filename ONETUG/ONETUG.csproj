@@ -208,6 +208,7 @@
     <Compile Include="Controllers\SubscribeNewsletterController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\UpcomingMeetingsController.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
