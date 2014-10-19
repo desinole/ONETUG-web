@@ -22,6 +22,8 @@ namespace Core
         public string MeetupApi { get; set; }
         public string MailChimpApiKey { get; set; }
         public string MailChimpGroupId { get; set; }
+        public string GithubOwner { get; set; }
+        public string GithubRepro { get; set; }
 
         public static GroupSettings Instance
         {
@@ -43,7 +45,9 @@ namespace Core
                             MeetupGroupName = Properties.Settings.Default.MeetupGroupName,
                             MeetupApi = Properties.Settings.Default.MeetupApi,
                             MailChimpApiKey = Properties.Settings.Default.MailChimpApiKey,
-                            MailChimpGroupId = Properties.Settings.Default.MailChimpGroupId
+                            MailChimpGroupId = Properties.Settings.Default.MailChimpGroupId,
+                            GithubOwner = Properties.Settings.Default.GithubOwner,
+                            GithubRepro = Properties.Settings.Default.GithubRepro
                         };
                     }
                 }

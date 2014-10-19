@@ -277,6 +277,9 @@
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\onetugwebsite - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\onetugwebsite - Web Deploy.pubxml" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\bacon.jpeg" />
     <Content Include="Images\BrianMishler.jpg" />
@@ -294,6 +297,7 @@
     <Content Include="Images\onetugbg.png" />
     <Content Include="Images\santosh.jpeg" />
     <Content Include="Images\shawn.jpg" />
+    <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -308,6 +312,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ONETUG.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -354,6 +359,7 @@
     <Content Include="Views\Home\Join.cshtml" />
     <Content Include="Views\Shared\_Tweet.cshtml" />
     <Content Include="Views\Home\Privacy.cshtml" />
+    <Content Include="Views\Home\Contributors.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

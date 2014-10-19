@@ -121,5 +121,23 @@ namespace Core.Properties {
                 return ((string)(this["MeetupApi"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("desinole")]
+        public string GithubOwner {
+            get {
+                return ((string)(this["GithubOwner"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ONETUG-web")]
+        public string GithubRepro {
+            get {
+                return ((string)(this["GithubRepro"]));
+            }
+        }
     }
 }

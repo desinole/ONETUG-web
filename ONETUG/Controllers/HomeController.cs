@@ -40,5 +40,10 @@ namespace ONETUG.Controllers
         {
             return View();
         }
+
+        public ActionResult Contributors()
+        {
+            return View(GroupSettings.Instance);
+        }
     }
 }

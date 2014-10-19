@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ONETUG">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - @Html.GroupName()</title>
@@ -10,27 +10,15 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/app")
 </head>
 <body>
-    <script>
-        $(function () {
-            $.getJSON("@Url.Content("~/api/sponsors")", function (data) {
-                if (data != null) {
-                    $("#divSponsors").html("");
-                    $("#divSponsors").append('<div><hgroup class="title"><h1>Our sponsors</h1></hgroup>');
-                    for (var i = 0; i < data.length; i++) {
-                        $("#divSponsors").append('<div><a href="' + data[i].CompanyUrl + '" target="_blank"><img style="float:left" src="' + data[i].ImageUrl + '" /></a>' + data[i].Info + '</div><p>&nbsp;</p>');
-                    }
-                    $("#divSponsors").append('</div><div style="clear: both"></div>');
-                }
-            });
-        });
-    </script>
     <header>
         <div class="content-wrapper">
             <div class="float-left" style="padding-right: 20px">
                 <a href="~/">
-                    <img src="@Url.Content("~/images/onetug.png")" alt="@Html.GroupName() Logo" /></a>
+                    <img src="@Url.Content("~/images/onetug.png")" alt="@Html.GroupName() Logo" />
+                </a>
             </div>
             <div class="float-left">
                 <div class="float-right">
@@ -39,13 +27,14 @@
                 <div style="clear: both;"></div>
                 <div class="float-right">
                     @*                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>*@
+                            @Html.Partial("_LoginPartial")
+                        </section>*@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Our story", "About", "Home")</li>
                             <li>@Html.ActionLink("The Team", "Team", "Home")</li>
+                            <li>@Html.ActionLink("Contributors", "Contributors", "Home")</li>
                         </ul>
                     </nav>
                 </div>
@@ -63,7 +52,19 @@
                 @Html.Partial("_Tweet")
             </aside>
             <article>
-                <div id="divSponsors"  class="content-wrapper" style="width:100%"></div>
+                <div id="divSponsors" class="content-wrapper" style="width:100%" ng-controller="sponsorsController" ng-init="init('@Url.Content("~/api/sponsors")')">
+                    <div>
+                        <hgroup class="title"><h1>Our sponsors</h1></hgroup>
+                        <div ng-repeat-start="sponsor in sponsors">
+                            <a ng-href="{{sponsor.CompanyUrl}}" target="_blank">
+                                <img style="float:left" ng-src="{{sponsor.ImageUrl}}" />
+                            </a>
+                            {{sponsor.Info}}
+                        </div>
+                        <p ng-repeat-end>&nbsp;</p>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
             </article>
         </section>
     </div>
@@ -79,7 +80,6 @@
 
             ga('create', 'UA-10607215-1', 'auto');
             ga('send', 'pageview');
-
         </script>
     </footer>
 

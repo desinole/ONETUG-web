@@ -35,5 +35,11 @@
     <Setting Name="MeetupApi" Type="System.String" Scope="Application">
       <Value Profile="(Default)">{value here}</Value>
     </Setting>
+    <Setting Name="GithubOwner" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">desinole</Value>
+    </Setting>
+    <Setting Name="GithubRepro" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ONETUG-web</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
