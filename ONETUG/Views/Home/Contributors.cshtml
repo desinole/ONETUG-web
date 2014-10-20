@@ -1,0 +1,19 @@
+﻿@model Core.GroupSettings
+@{
+    ViewBag.Title = "Contributors";
+}
+<hgroup class="title">
+    <h1>Web Site Contributors</h1>
+</hgroup>
+
+<div>
+    Contribute at <a href="https://github.com/@(Model.GithubOwner)/@(Model.GithubRepro)">https://github.com/@(Model.GithubOwner)/@(Model.GithubRepro)</a>
+</div>
+
+<div ng-init="init('@Model.GithubOwner', '@Model.GithubRepro')" ng-controller="contributorsController">
+    <div ng-repeat="contributor in contributors">
+        <img ng-src="{{contributor.avatar_url}}" style="float:left;padding-right:10px;height:150px;" />
+        <p><strong>{{contributor.login}}</strong></p>
+        <div style="clear:both"></div>
+    </div>
+</div>

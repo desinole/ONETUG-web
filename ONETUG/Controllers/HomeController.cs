@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Core;
+using ONETUG.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +12,6 @@ namespace ONETUG.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 
@@ -28,9 +28,7 @@ namespace ONETUG.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return PartialView(GroupSettings.Instance);
         }
 
         public ActionResult Team()
@@ -41,6 +39,11 @@ namespace ONETUG.Controllers
         public ActionResult Join()
         {
             return View();
+        }
+
+        public ActionResult Contributors()
+        {
+            return View(GroupSettings.Instance);
         }
     }
 }

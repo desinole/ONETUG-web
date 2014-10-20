@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GroupName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyDotNetGroup</Value>
+    </Setting>
+    <Setting Name="MeetupGroupName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyDotNetGroup</Value>
+    </Setting>
+    <Setting Name="TwitterHandle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyDotNetGroup</Value>
+    </Setting>
+    <Setting Name="Title" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">My .NET User Group</Value>
+    </Setting>
+    <Setting Name="LinkedInGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">00000000</Value>
+    </Setting>
+    <Setting Name="FacebookGroupName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyDotNetGroup</Value>
+    </Setting>
+    <Setting Name="EmailAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MyGroup@MyGroup.net</Value>
+    </Setting>
+    <Setting Name="TwitterWidgetId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">000000000000000000</Value>
+    </Setting>
+    <Setting Name="MailChimpApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{value here}</Value>
+    </Setting>
+    <Setting Name="MailChimpGroupId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{value here}</Value>
+    </Setting>
+    <Setting Name="MeetupApi" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{value here}</Value>
+    </Setting>
+    <Setting Name="GithubOwner" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">desinole</Value>
+    </Setting>
+    <Setting Name="GithubRepro" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ONETUG-web</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
