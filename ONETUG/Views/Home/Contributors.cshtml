@@ -13,7 +13,7 @@
 <div ng-init="init('@Model.GithubOwner', '@Model.GithubRepro')" ng-controller="contributorsController">
     <div ng-repeat="contributor in contributors">
         <img ng-src="{{contributor.avatar_url}}" style="float:left;padding-right:10px;height:150px;" />
-        <p><strong>{{contributor.login}}</strong></p>
+        <p><strong><a target="_blank" href="https://github.com/{{contributor.login}}">{{contributor.login}}</a></strong></p>
         <div style="clear:both"></div>
     </div>
 </div>

@@ -29,8 +29,8 @@
                 <h4 class="ui-widget-header">{{event.Name}}</h4>
                 <p><strong>When:</strong>&nbsp;{{event.MeetingTime}}</p>
                 <p><strong>Where:</strong><br />{{event.VenueName}}<br />{{event.VenueAddress}}</p>
-                <a ng-href="{{event.Url}}"><strong><em>Join {{attendees(event.NumberRSVPedYes)}} other attendees</em></strong></a>
-                {{event.MeetingDescriptionHTML}}
+                <p><a ng-href="{{event.Url}}"><strong><em>Join {{attendees(event.NumberRSVPedYes)}} other attendees</em></strong></a></p>
+                <ng-bind-html ng-bind-html="event.MeetingDescriptionHTML"></ng-bind-html>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
         <div>
             <img ng-src="@Url.Content("~/Images/"){{member.ImageFileName}}" style="float:left;padding-right:10px;height:150px;" />
             <p><strong>{{member.Name}}</strong> {{member.Position}}</p>
-            <p>{{member.DescriptionHTML}}</p>
+            <p><ng-bind-html ng-bind-html="member.DescriptionHTML"></ng-bind-html></p>
         </div>
         <div style="clear:both"></div>
         <div>&nbsp;</div>

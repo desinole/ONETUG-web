@@ -27,37 +27,71 @@ namespace ONETUG.Controllers
             {
                 Id = 1,
                 Name = "Esteban Garcia",
-                ImageFileName = "Esteban.jpg",
+                ImageFileName = "esteban.jpg",
                 IsCurrent = true,
                 Position = "President",
-                DescriptionHTML = "Esteban Garcia is Principal Consultant at M2E Solutions, and Orlando-based software consulting firm. He has more than 10 years experience in professional software development. He is experienced in all phases of distributed object oriented enterprise application development and design on the Windows platform, and he has focused on the .NET Framework since 2001. He has been involved with different industries such as mobile technologies, financial services, telecommunications, health care, and developer tools. Esteban excels in architecture and best practices and is able to provide advice on SDLC customization and build automation. He holds certifications on MCAD, MCSD.NET, IEEE Certified Software Engineer, and ScrumMaster. Esteban also has a bachelor of science degree in Computer Engineering with an emphasis in software design from the University of Central Florida."
+                DescriptionHTML = "<p>Esteban Garcia is the Founder and Chief Technologist at " +
+                "<a href=\"http://www.nebbiatech.com/\" target=\"_blank\">Nebbia Technology</a>, " +
+                "where he focuses on DevOps and Azure. He spends his time  helping organizations " +
+                "moving to the Cloud and adopting DevOps best practices.&nbsp; Esteban is a " +
+                "<a href=\"https://mvp.microsoft.com/en-us/PublicProfile/4039786\" target=\"_blank\">Microsoft Visual Studio ALM MVP</a> " +
+                "and <a href=\"https://blogs.msdn.microsoft.com/willy-peter_schaub/2012/03/28/introducing-the-visual-studio-alm-rangers-esteban-garcia/\" target=\"_blank\">ALM Ranger</a>, " +
+                "<a href=\"http://www.pluralsight.com/author/esteban-garcia\" target=\"_blank\">Pluralsight author</a>, and member of <a href=\"http://www.red-gate.com/community/friends-of-rg/directory\" target=\"_blank\">Friends of Redgate</a>.</p>" +
+                "<p> After graduating with a Computer Engineering degree from the University of Central Florida in 1999, " +
+                "Esteban has worked in various roles in the Software Development field, " +
+                "ranging from QA to Solutions Architect.A year after battling the Y2K bug, " +
+                "he joined a company that was experimenting with a new framework called.NET and a new language called C# and he has been a .NET developer ever since. " +
+                "You can often find Esteban speaking at other user groups in Florida, Code Camps throughout the Southeast, and national conferences such as DevConnections and VSLive.</p>" +
+                "< p > Blog: < a href = \"http://www.almguide.com/\" target = \"_blank\" >http://www.almguide.com/</a></p>" +
+                "< p > Twitter: < a href = \"https://twitter.com/estebanfgarcia\" target = \"_blank\" >@EstebanFGarcia</ a ></ p >" +
+                "< p > LinkedIn: < a href = \"https://www.linkedin.com/in/estebangarcia\" target = \"_blank\" >https://www.linkedin.com/in/estebangarcia</a></p>" +
+                "< p > Email: < a href = \"mailto:esteban@nebbiatech.com\" target = \"_blank\" >esteban@nebbiatech.com </ a ></ p >"
             });
             MemberList.Add(new TeamMember
             {
                 Id = 2,
                 Name = "Brian Mishler",
-                ImageFileName = "BrianMishler.jpg",
+                ImageFileName = "brian.jpg",
                 IsCurrent = true,
                 Position = "Vice President",
-                DescriptionHTML = "Brian is President of Quality Data, Inc., an Orlando-based software development firm. He holds a BS degree in Aerospace Engineering, University of Florida, 1983 where he learned to program in Fortran using punch cards. In his first job as a Quality Engineer at Martin Marietta Corp, he was given the task of learning DBASE II on one of the first IBM PC's at that company. It was here that he developed a passion for programming and in 1991, Brian co-founded The Harrington Group, Inc., a Quality Management Software Company which grew to 23-employees by the time he sold his interest in 2003. During his 26-years as a Software Developer, he has been proficient in xBase, Clipper, VB1 through VB6, VB.Net and C#. His hobbies involve his family and guess-what? .Net! "
+                DescriptionHTML = "<p>Brian is a full stack .Net software developer for <a target=\"_blank\" href=\"https://seaworldentertainment.com/\">Sea World Parks & Entertainment</a>." +
+                "While earning a B.S.degree in Aerospace Engineering from the University of Florida, " +
+                "Brian took exactly one computer course: FORTRAN 77.Otherwise, " +
+                "all his professional skills are self taught.His passions include software development and aviation. Lately, " +
+                "he’s been spending a lot of time in gliders.</ p >" +
+                "< p > LinkedIn: < a href =\"https://www.linkedin.com/in/brian-mishler-000b3493\" target=\"_blank\">https://www.linkedin.com/in/brian-mishler-000b3493</a></p>" +
+                "< p > Email: < a href =\"mailto:brian@onetug.org\" target=\"_blank\">brian@onetug.org</a></p>"
             });
             MemberList.Add(new TeamMember
             {
                 Id = 3,
-                Name = "John Torrey",
-                ImageFileName = "johntorrey.jpg",
+                Name = "Santosh Hari",
+                ImageFileName = "santosh.jpg",
                 IsCurrent = true,
-                Position = "Treasurer",
-                DescriptionHTML = "John has had a varied background.  His first related job out of college was to work on applications for filling out auto dealership finance contracts.  From there, he took courses in automation systems and started working with a professor writing a Windows-based user interface for proprietary digital audio playback devices used in theme parks around the world.  At another company, he then developed a DOS-based serial communication interface for linking the intercom, video camera, and wireless \"man down\" systems of the Palm Beach County Judicial Center to its security-controlling PLCs and subsequently aided in programming the PLCs controlling the office and stairwell doors, detention cells, and elevators. This guided him into a dark period that has come to be known as the \"evil, PLC era\", where he spent many years creating and maintaining theme park ride control systems.  More recently, he found the world of .NET programming, and has since never looked back.  By day, he writes .NET enterprise applications for the City of Orlando.  By night and weekend, he provides universally useful software and APIs (at least in his mind) and has now established a company called Ryppl for disseminating them."
+                Position = "Director of Technology",
+                DescriptionHTML = "<p>Santosh Hari is Director of Software for <a href=\"https://spectrumbridge.com/\" target=\"_blank\">Spectrum Bridge</a>, a wireless startup, where he leverages his software skills to help provide high quality, affordable wireless broadband to the developing world. He is also Director of Tech for <a href=\"http://onetug.org/\" target=\"_blank\">Orlando .NET User Group</a>, co-organizer of <a href=\"http://orlandocodecamp.com/\" target=\"_blank\">Orlando Codecamp</a>, a frequent speaker on topics like Azure and GIS at user group meetups and Codecamps and participates in creative side projects with Sand Dollar Technology.</p>" +
+                "< p > Santosh is a software entrepreneur with experience building products on the.NET platform since 2002 and nearly 2 decades in the software industry. Before 2000, " +
+                "his claim to fame was working on projects that saved the world from the Y2K disasters.</ p >" +
+                "< p > Santosh holds a Bachelors in Electronics Engineering and a Masters in Computer Science.When not working on software projects, " +
+                "Santosh loves playing tennis, " +
+                "rescuing animals and rooting for his favorite sports team, the Florida State Seminoles.</ p >" +
+                "< p > Blog: < a href = \"https://santoshhari.wordpress.com/\" target =\"_blank\" > https://santoshhari.wordpress.com/</a></p>" +
+                "< p > Twitter: < a href = \"https://twitter.com/_s_hari\" target = \"_blank\" > @_s_hari </ a ></ p >" +
+                "< p > LinkedIn: < a href = \"https://www.linkedin.com/in/santoshhari\" target = \"_blank\" > https://www.linkedin.com/in/santoshhari</a></p>" +
+                "< p > Email: < a href = \"mailto:santosh@onetug.org\" target = \"_blank\" > santosh@onetug.org </ a ></ p >"
             });
             MemberList.Add(new TeamMember
             {
                 Id = 4,
-                Name = "Santosh Hari",
-                ImageFileName = "santosh.jpeg",
+                Name = "Chelsea Coster",
+                ImageFileName = "chelsea.jpg",
                 IsCurrent = true,
-                Position = "Director of Technology",
-                DescriptionHTML = "Santosh is a software entrepreneur with experience building products on the .NET platform since 2002 and over 15 years in the software industry. Before 2000, his claim to fame was working on projects that saved the world from the Y2K disasters. He currently works for a startup, leveraging his software skills to help provide better coverage for your wireless devices. He specializes in web services, APIs, ETL and databases and, on-the-side, loves tinkering with geospatial data and software. Santosh holds a Bachelors in Electronics Engineering and a Masters in Computer Science. When not working on software projects, Santosh loves playing tennis, rescuing animals and rooting for his favorite sports team, the Florida State Seminoles."
+                Position = "Director of Communications",
+                DescriptionHTML = "<p>Chelsea Coster is the Director of Communications of the <a href=\"http://onetug.org/\" target=\"_blank\">Orlando .NET User Group</a> and Director of Sales and Operations at <a href=\"http://www.nebbiatech.com/\" target=\"_blank\">Nebbia Technology</a>. Prior to Nebbia Technology, she worked in Information Technology Staffing for 5 ½ years and held various roles including Technical Recruiter, Executive Recruiter and Division Director for Orlando at SNI Technology.</p>"+
+                "< p > She has a Bachelor's Degree in Marketing and Human Resources from the Florida State University and is very involved in both the technical community and the Orlando community. She is an active member of the Junior League of Greater Orlando and when she is not at the ONETUG meetings or volunteering, you can find her at CrossFit Winter Park or hanging out with her Springer Spaniel, Bailey.</p>"+
+                "< p > Twitter: < a href = \"https://twitter.com/chelseazcoster\" target = \"_blank\" >@chelseazcoster</ a ></ p >"+
+                "< p > LinkedIn: < a href = \"https://www.linkedin.com/in/chelseazcoster\" target = \"_blank\" >https://www.linkedin.com/in/chelseazcoster</a></p>"+
+                "< p > Email: < a href = \"mailto:chelsea@nebbiatech.com\" target = \"_blank\" >chelsea@nebbiatech.com </ a ></ p >"
             });
             MemberList.Add(new TeamMember
             {

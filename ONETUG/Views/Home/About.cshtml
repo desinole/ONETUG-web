@@ -9,7 +9,7 @@
     <div id="divGroupInfo" ng-controller="groupController" ng-init="init('@Url.Content("~/api/group")')">
         <a target="_blank" ng-href="{{group.GroupUrl}}"><img style="padding-right:10px;padding-top:10px;float:left" height="100px" ng-src="{{group.ImageUrl}}" /></a>
         <a target="_blank" ng-href="{{group.GroupUrl}}"><h1>{{group.Name}}</h1></a>
-        {{group.Description}}
+        <ng-bind-html ng-bind-html="group.Description"></ng-bind-html>
     </div>
     <div style="clear: both"></div>
 </div>

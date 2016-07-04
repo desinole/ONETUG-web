@@ -1,4 +1,4 @@
-﻿angular.module('ONETUG', []);
+﻿angular.module('ONETUG', ['ngSanitize']);
 
 angular.module('ONETUG').controller('contributorsController', ['$scope', '$http', function ($scope, $http) {
     $scope.init = function (owner, repro) {
@@ -42,7 +42,7 @@ angular.module('ONETUG').controller('groupController', ['$scope', '$http', funct
     $scope.init = function (url) {
         //$scope.group = { "GroupUrl": "http://www.meetup.com/ONETUG/", "ImageUrl": "http://photos1.meetupstatic.com/photos/event/e/a/4/4/600_362039972.jpeg", "Description": "<p>ONETUG was founded by Joel Martinez in 2001. Our goal is to showcase great speakers &amp; content centered around, but not restricted to, the Microsoft .NET stack. We strive to bring together developers from all platforms by holding monthly meetings, Nerd Dinners &amp; an annual Codecamp. Our vision is to collaborate with other tech groups &amp; help build Orlando into a major hub for technology companies &amp; startups.</p>", "Name": "ONETUG - Orlando .NET User Group" };
         $http.get(url).then(function (result) {
-            $scope.sponsors = result.data;
+            $scope.group = result.data;
         });
     }
 }]);
